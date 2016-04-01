@@ -3,7 +3,7 @@ import requests
 
 from power_rangers import errors
 
-BASE_URL = 'http://localhost:8000/v1/'
+BASE_URL = 'http://powerapi.blueyes.nl/v1/'
 
 
 class Core(object):
@@ -26,7 +26,7 @@ class Core(object):
             raise self.error_map[response.status_code]()
         if response.status_code == 204:
             return None
-        json_data = json.loads(response.content)
+        json_data = json.loads(response.content.decode('UTF-8', 'ignore'))
         return json_data
 
     def get(self, f):

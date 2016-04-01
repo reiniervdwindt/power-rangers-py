@@ -1,4 +1,4 @@
-from core import get
+from power_rangers.core import get
 
 
 @get

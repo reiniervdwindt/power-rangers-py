@@ -6,5 +6,5 @@ def get_by_id(id):
     if not isinstance(id, int):
         raise ValueError('id must be an integer')
 
-    data = yield 'rangers/{id}'.format(id=id)
+    data = yield 'zords/{id}'.format(id=id)
     yield data

@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-import os
 from setuptools import setup
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+with open('requirements.txt') as f:
+    requires = [line.strip() for line in f if line.strip()]
 
 setup(
     name='Power Rangers',
@@ -12,7 +12,6 @@ setup(
     author='Reinier van der Windt',
     author_email='hello@blueyes.io',
     url='http://powerapi.blueyes.nl',
-    install_requires=[
-        'requests==2.9.1'
-    ],
+    install_requires=requires,
+    test_suite='tests',
 )

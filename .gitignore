@@ -17,6 +17,10 @@ venv
 # Packages
 bower_components
 node_modules
+*.egg
+*.egg-info
+dist
+build
 
 # User generated content
 media
