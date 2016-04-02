@@ -10,7 +10,7 @@ class Ranger(object):
         self.color = data.get('color')
         self.weapon = Weapon(data.get('weapon')) if data.get('weapon') else None
         self.zords = [Zord(z) for z in data.get('zords')]
-        self.images = [Image(i) for i in data.get('images')]
+        self.images = [Image(i) for i in data.get('images')] if data.get('images') else []
 
 
 class Villain(object):
@@ -18,7 +18,7 @@ class Villain(object):
         self.id = data.get('id')
         self.name = data.get('name')
         self.description = data.get('description')
-        self.images = [Image(i) for i in data.get('images')]
+        self.images = [Image(i) for i in data.get('images')] if data.get('images') else []
 
 
 class Weapon(object):
@@ -26,7 +26,7 @@ class Weapon(object):
         self.id = data.get('id')
         self.name = data.get('name')
         self.type = data.get('type')
-        self.images = [Image(i) for i in data.get('images')]
+        self.images = [Image(i) for i in data.get('images')] if data.get('images') else []
 
 
 class Zord(object):
@@ -35,4 +35,4 @@ class Zord(object):
         self.name = data.get('name')
         self.description = data.get('description')
         self.type = data.get('type')
-        self.images = [Image(i) for i in data.get('images')]
+        self.images = [Image(i) for i in data.get('images')] if data.get('images') else []

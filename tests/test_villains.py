@@ -14,7 +14,7 @@ class VillainsTestCase(unittest.TestCase):
 
         villain = response[0]
         self.assertIsInstance(villain, Villain)
-        self.assertEqual(villain.name, 'Rita Repulsa')
+        self.assertEqual(villain.name, 'Goldar')
 
     def test_get_villain_by_id(self):
         villain = villains.get_by_id(1)

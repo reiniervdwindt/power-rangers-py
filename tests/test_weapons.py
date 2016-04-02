@@ -14,7 +14,7 @@ class WeaponsTestCase(unittest.TestCase):
 
         weapon = response[0]
         self.assertIsInstance(weapon, Weapon)
-        self.assertEqual(weapon.name, 'Power Sword')
+        self.assertEqual(weapon.name, 'Dragon Dagger')
 
     def test_get_weapon_by_id(self):
         weapon = weapons.get_by_id(1)
