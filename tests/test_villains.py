@@ -29,6 +29,10 @@ class VillainsTestCase(unittest.TestCase):
         with self.assertRaises(TypeError):
             villains.get_by_id()
 
+    def test_get_villains_wrong_id_type(self):
+        with self.assertRaises(ValueError):
+            villains.get_by_id('rita')
+
     def test_get_villain_not_found(self):
         with self.assertRaises(NotFoundException):
             villains.get_by_id(999)

@@ -29,6 +29,10 @@ class ZordsTestCase(unittest.TestCase):
         with self.assertRaises(TypeError):
             zords.get_by_id()
 
+    def test_get_zord_wrong_id_type(self):
+        with self.assertRaises(ValueError):
+            zords.get_by_id('megazord')
+
     def test_get_zord_not_found(self):
         with self.assertRaises(NotFoundException):
             zords.get_by_id(999)

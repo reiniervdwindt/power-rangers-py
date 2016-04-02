@@ -30,6 +30,10 @@ class RangersTestCase(unittest.TestCase):
         with self.assertRaises(TypeError):
             rangers.get_by_id()
 
+    def test_get_ranger_wrong_id_type(self):
+        with self.assertRaises(ValueError):
+            rangers.get_by_id('red-ranger')
+
     def test_get_ranger_not_found(self):
         with self.assertRaises(NotFoundException):
             rangers.get_by_id(999)
