@@ -27,3 +27,6 @@ media
 
 # Development
 params.py
+
+# Generated files
+.coverage

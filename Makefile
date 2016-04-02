@@ -1,4 +1,6 @@
 PYTHON=@`which python`
+COVERAGE=@`which coverage`
 
 test:
-	$(PYTHON) src/manage.py test src
+	$(COVERAGE) run --source=power_rangers setup.py test
+	$(COVERAGE) report

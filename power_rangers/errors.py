@@ -1,5 +1,10 @@
-__all__ = ['PowerRangersException', 'BadRequestException', 'UnauthorizedException',
-           'ForbiddenException', 'NotFoundException']
+__all__ = [
+    'PowerRangersException',
+    'BadRequestException',
+    'UnauthorizedException',
+    'ForbiddenException',
+    'NotFoundException'
+]
 
 
 class PowerRangersException(BaseException):
@@ -11,24 +16,32 @@ class PowerRangersException(BaseException):
 
 
 class BadRequestException(PowerRangersException):
-    """TraktException type to be raised when a 401 return code is recieved"""
+    """
+    PowerRangersException type to be raised when a 401 return code is received
+    """
     http_code = 400
     message = "Bad Request"
 
 
 class UnauthorizedException(PowerRangersException):
-    """TraktException type to be raised when a 401 return code is recieved"""
+    """
+    PowerRangersException type to be raised when a 401 return code is received
+    """
     http_code = 401
     message = 'Unauthorized'
 
 
 class ForbiddenException(PowerRangersException):
-    """TraktException type to be raised when a 403 return code is recieved"""
+    """
+    PowerRangersException type to be raised when a 403 return code is received
+    """
     http_code = 403
     message = 'Forbidden'
 
 
 class NotFoundException(PowerRangersException):
-    """TraktException type to be raised when a 404 return code is recieved"""
+    """
+    PowerRangersException type to be raised when a 404 return code is received
+    """
     http_code = 404
     message = 'Not Found'

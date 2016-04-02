@@ -24,22 +24,15 @@ class Core(object):
         response = requests.request(method, url)
         if response.status_code in self.error_map:
             raise self.error_map[response.status_code]()
-        if response.status_code == 204:
-            return None
         json_data = json.loads(response.content.decode('UTF-8', 'ignore'))
         return json_data
 
     def get(self, f):
         def inner(*args, **kwargs):
             resp = self._get_url(f, *args, **kwargs)
-            if not isinstance(resp, tuple):
-                return resp
             url, generator = resp
             json_data = self._handle_request('get', url)
-            try:
-                return generator.send(json_data)
-            except StopIteration:
-                return None
+            return generator.send(json_data)
 
         return inner
 

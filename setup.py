@@ -6,7 +6,7 @@ with open('requirements.txt') as f:
     requires = [line.strip() for line in f if line.strip()]
 
 setup(
-    name='Power Rangers',
+    name='power-rangers',
     version='0.1',
     description='A Python wrapper for Power Rangers API',
     author='Reinier van der Windt',
