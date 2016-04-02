@@ -14,7 +14,16 @@ class RangersTestCase(unittest.TestCase):
 
         ranger = response[0]
         self.assertIsInstance(ranger, Ranger)
+        self.assertEqual(ranger.id, 1)
         self.assertEqual(ranger.name, 'Red Ranger')
+        self.assertEqual(ranger.color, 'red')
+        self.assertIsInstance(ranger.images, list)
+        self.assertIsInstance(ranger.zords, list)
+
+        self.assertEqual(ranger.weapon.id, 1)
+        self.assertEqual(ranger.weapon.name, 'Power Sword')
+        self.assertEqual(ranger.weapon.type, 'sword')
+        self.assertIsInstance(ranger.weapon.images, list)
 
     def test_get_ranger_by_id(self):
         ranger = rangers.get_by_id(1)
@@ -23,8 +32,13 @@ class RangersTestCase(unittest.TestCase):
         self.assertEqual(ranger.id, 1)
         self.assertEqual(ranger.name, 'Red Ranger')
         self.assertEqual(ranger.color, 'red')
-        self.assertEqual(ranger.weapon, 1)
         self.assertIsInstance(ranger.images, list)
+        self.assertIsInstance(ranger.zords, list)
+
+        self.assertEqual(ranger.weapon.id, 1)
+        self.assertEqual(ranger.weapon.name, 'Power Sword')
+        self.assertEqual(ranger.weapon.type, 'sword')
+        self.assertIsInstance(ranger.weapon.images, list)
 
     def test_get_ranger_missing_id(self):
         with self.assertRaises(TypeError):
