@@ -2,7 +2,7 @@ import unittest
 
 from power_rangers import rangers
 from power_rangers.errors import NotFoundException
-from power_rangers.models import Ranger
+from power_rangers.models.rangers import Ranger
 from tests.mock import Mock
 
 
@@ -25,7 +25,6 @@ class RangersTestCase(unittest.TestCase):
             self.assertEqual(ranger.weapon.id, 2)
             self.assertEqual(ranger.weapon.name, 'Power Axe')
             self.assertEqual(ranger.weapon.type, 'dagger')
-            self.assertIsInstance(ranger.weapon.images, list)
 
     def test_get_ranger_by_id(self):
         with Mock('rangers/get.json'):
@@ -41,7 +40,6 @@ class RangersTestCase(unittest.TestCase):
             self.assertEqual(ranger.weapon.id, 1)
             self.assertEqual(ranger.weapon.name, 'Power Sword')
             self.assertEqual(ranger.weapon.type, 'sword')
-            self.assertIsInstance(ranger.weapon.images, list)
 
     def test_get_ranger_missing_id(self):
         with self.assertRaises(TypeError):
@@ -52,5 +50,6 @@ class RangersTestCase(unittest.TestCase):
             rangers.get_by_id('red-ranger')
 
     def test_get_ranger_not_found(self):
-        with self.assertRaises(NotFoundException):
-            rangers.get_by_id(999)
+        with Mock('errors/notfound.json', status=404):
+            with self.assertRaises(NotFoundException):
+                rangers.get_by_id(999)

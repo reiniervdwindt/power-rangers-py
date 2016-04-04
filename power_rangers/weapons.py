@@ -1,5 +1,5 @@
 from power_rangers.core import get
-from power_rangers.models import Weapon
+from power_rangers.models.weapons import Weapon
 
 
 @get

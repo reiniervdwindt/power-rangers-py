@@ -1,5 +1,5 @@
-from power_rangers.core import get
-from power_rangers.models import Civilian
+from .core import get
+from .models.civilians import Civilian
 
 
 @get

@@ -11,7 +11,7 @@ setup(
     description='A Python wrapper for Power Rangers API',
     author='Reinier van der Windt',
     author_email='hello@blueyes.io',
-    url='http://powerapi.blueyes.nl',
+    url='https://github.com/reiniervdwindt/power-rangers-py',
     install_requires=requires,
     test_suite='tests',
 )

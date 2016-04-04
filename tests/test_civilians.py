@@ -2,7 +2,7 @@ import unittest
 
 from power_rangers import civilians
 from power_rangers.errors import NotFoundException
-from power_rangers.models import Civilian
+from power_rangers.models.civilians import Civilian
 from tests.mock import Mock
 
 
@@ -40,5 +40,6 @@ class CiviliansTestCase(unittest.TestCase):
             civilians.get_by_id('red-civilian')
 
     def test_get_civilian_not_found(self):
-        with self.assertRaises(NotFoundException):
-            civilians.get_by_id(999)
+        with Mock('errors/notfound.json', status=404):
+            with self.assertRaises(NotFoundException):
+                civilians.get_by_id(999)
