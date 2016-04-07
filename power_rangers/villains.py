@@ -1,5 +1,5 @@
 from power_rangers.core import get
-from power_rangers.models import Villain
+from power_rangers.models.villains import Villain
 
 
 @get

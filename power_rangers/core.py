@@ -1,4 +1,5 @@
 import json
+
 import requests
 
 from power_rangers import errors

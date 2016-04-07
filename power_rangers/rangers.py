@@ -1,5 +1,5 @@
 from power_rangers.core import get
-from power_rangers.models import Ranger
+from power_rangers.models.rangers import Ranger
 
 
 @get

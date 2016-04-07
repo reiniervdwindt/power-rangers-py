@@ -1,6 +1,11 @@
 import unittest
 
-from power_rangers.errors import BadRequestException, UnauthorizedException, ForbiddenException, NotFoundException
+from power_rangers.errors import (
+    BadRequestException,
+    ForbiddenException,
+    NotFoundException,
+    UnauthorizedException
+)
 
 
 class ErrorsTestCase(unittest.TestCase):

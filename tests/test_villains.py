@@ -1,8 +1,10 @@
 import unittest
 
+from six import assertRegex
+
 from power_rangers import villains
 from power_rangers.errors import NotFoundException
-from power_rangers.models import Villain
+from power_rangers.models.villains import Villain
 from tests.mock import Mock
 
 
@@ -25,8 +27,9 @@ class VillainsTestCase(unittest.TestCase):
             self.assertIsInstance(villain, Villain)
             self.assertEqual(villain.id, 1)
             self.assertEqual(villain.name, 'Rita Repulsa')
-            self.assertRegexpMatches(villain.description, '^Rita Repulsa is an evil humanoid alien witch')
             self.assertIsInstance(villain.images, list)
+
+            assertRegex(self, villain.description, '^Rita Repulsa is an evil humanoid alien witch')
 
     def test_get_villain_missing_id(self):
         with self.assertRaises(TypeError):
@@ -37,5 +40,6 @@ class VillainsTestCase(unittest.TestCase):
             villains.get_by_id('rita')
 
     def test_get_villain_not_found(self):
-        with self.assertRaises(NotFoundException):
-            villains.get_by_id(999)
+        with Mock('errors/notfound.json', status=404):
+            with self.assertRaises(NotFoundException):
+                villains.get_by_id(999)

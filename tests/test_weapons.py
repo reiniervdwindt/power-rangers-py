@@ -2,7 +2,7 @@ import unittest
 
 from power_rangers import weapons
 from power_rangers.errors import NotFoundException
-from power_rangers.models import Weapon
+from power_rangers.models.weapons import Weapon
 from tests.mock import Mock
 
 
@@ -36,5 +36,6 @@ class WeaponsTestCase(unittest.TestCase):
             weapons.get_by_id('power-sword')
 
     def test_get_weapon_not_found(self):
-        with self.assertRaises(NotFoundException):
-            weapons.get_by_id(999)
+        with Mock('errors/notfound.json', status=404):
+            with self.assertRaises(NotFoundException):
+                weapons.get_by_id(999)

@@ -12,7 +12,7 @@ src/main/static/css
 .sass-cache
 
 # Virtual environments
-venv
+venv*
 
 # Packages
 bower_components

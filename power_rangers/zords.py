@@ -1,5 +1,5 @@
 from power_rangers.core import get
-from power_rangers.models import Zord
+from power_rangers.models.zords import Zord
 
 
 @get
