@@ -5,7 +5,7 @@
     "type": "thunderzord",
     "images": [
         {
-            "image": "http://powerapi.blueyes.nl/static/media/zords/MMPR_Tigerzord.jpg"
+            "url": "http://powerapi.blueyes.nl/static/media/zords/MMPR_Tigerzord.jpg"
         }
     ],
     "modes": [
@@ -15,7 +15,7 @@
             "description": "Tiger mode is the primary form that the Tigerzord takes when entering battle. It can not only move fast, but can emit powerful sonic blasts at opponents. The Red Dragon Thunderzord can ride on the Tigerzord and use its staff to strike oncoming foes. For the Thunder Ultrazord configuration, Tigerzord in tiger mode was placed inside of Tor the Shuttlezord's shell.",
             "images": [
                 {
-                    "image": "http://powerapi.blueyes.nl/static/media/zords/modes/MMPR_Tigerzord.jpg"
+                    "url": "http://powerapi.blueyes.nl/static/media/zords/modes/MMPR_Tigerzord.jpg"
                 }
             ]
         },
@@ -25,7 +25,7 @@
             "description": "The primary fighting form, Warrior mode is equipped with a sword, and can fire powerful \"White Tiger Thunderbolts\" in the form of energy fireballs at his opponents. It has also demonstrated the ability to follow the White Ranger's every move, first used against the monster Nimrod. Tigerzord would often fight alongside the Thunder Megazord in this mode.",
             "images": [
                 {
-                    "image": "http://powerapi.blueyes.nl/static/media/zords/modes/MMPR_Tigerzord_Warrior_Mode.jpg"
+                    "url": "http://powerapi.blueyes.nl/static/media/zords/modes/MMPR_Tigerzord_Warrior_Mode.jpg"
                 }
             ]
         }

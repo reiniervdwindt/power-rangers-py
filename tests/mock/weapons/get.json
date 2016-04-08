@@ -9,7 +9,7 @@
     },
     "images": [
         {
-            "image": "http://powerapi.blueyes.nl/static/media/weapons/Power_Sword.jpg"
+            "url": "http://powerapi.blueyes.nl/static/media/weapons/Power_Sword.jpg"
         }
     ]
 }

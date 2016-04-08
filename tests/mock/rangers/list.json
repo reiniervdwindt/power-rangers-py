@@ -109,7 +109,7 @@
         ],
         "images": [
             {
-                "image": "http://powerapi.blueyes.nl/static/media/rangers/Mmpr-red.png"
+                "url": "http://powerapi.blueyes.nl/static/media/rangers/Mmpr-red.png"
             }
         ]
     },
