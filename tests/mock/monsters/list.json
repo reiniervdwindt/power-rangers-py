@@ -1,0 +1,36 @@
+[
+    {
+        "id": 25,
+        "name": "Babe Ruthless",
+        "description": "Babe Ruthless was a one-horned baseball-esque pixie/ogre monster created by Finster who accompanies Goldar in his turn to conquer the rangers. After mercilessly clobbering the individual zords, the Rangers form the Dragonzord Battle Mode. A short battle ensues, but Babe Ruthless's attacks aren't as successful, with some even being returned. Eventually, he is destroyed by the Dragonzord Battle Mode, being impaled through his stomach, leaving a sizzling perforated hole, causing him to fall over dizzily and explode.",
+        "images": []
+    },
+    {
+        "id": 1,
+        "name": "Bones",
+        "description": "Bones is a skeleton monster created by Finster. Bones is notable as being the first monster-of-the-week to appear in Power Rangers.",
+        "images": [
+            {
+                "url": "http://powerapi.blueyes.nl/static/media/monsters/MMPR_Bones.jpg"
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Cardiatron",
+        "description": "Cardiatron",
+        "images": []
+    },
+    {
+        "id": 8,
+        "name": "Chunky Chicken",
+        "description": "Chunky Chicken is a chicken monster created by Finster when Rita Repulsa asked for a truly cruel monster. He captured Maria, a young girl who Kimberly and Trini were babysitting, and used her to open a chest to retrieve the Power Eggs, as the chest could only be opened by a child. The Chunky Chicken used a pair of giant scissors to tear a hole in the fabric of time and space in order to move around. The Chunky Chicken was destroyed by the Megazord, after unsuccessfully trying to duck the Power Sword.",
+        "images": []
+    },
+    {
+        "id": 48,
+        "name": "Commander Crayfish",
+        "description": "Commander Crayfish was a crayfish monster that led the Mutant Rangers (whom were Putties using the Badges of Darkness). He was chosen to lead the Mutant Rangers when no Putty was worthy of becoming the Red Mutant Ranger, being entrusted with the power of the Red Badge of Darkness. He wielded a similar version of the Red Ranger's Power Sword. The Ultrazord was able to destroy Commander Crayfish and the Blue, Green, and Black Mutant Rangers simultaneously. He was the last monster grown giant by using only Rita's wand.",
+        "images": []
+    }
+]

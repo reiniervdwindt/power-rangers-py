@@ -48,4 +48,4 @@ class Model(with_metaclass(MetaModel)):
 
 
 class Image(Model):
-    url = fields.CharField(source='image')
+    url = fields.CharField()

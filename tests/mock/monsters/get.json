@@ -1,0 +1,10 @@
+{
+    "id": 1,
+    "name": "Bones",
+    "description": "Bones is a skeleton monster created by Finster. Bones is notable as being the first monster-of-the-week to appear in Power Rangers.",
+    "images": [
+        {
+            "url": "http://powerapi.blueyes.nl/static/media/monsters/MMPR_Bones.jpg"
+        }
+    ]
+}
